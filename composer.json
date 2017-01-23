@@ -1,14 +1,6 @@
 {
     "repositories": [
         {
-            "type": "vcs",
-            "url": "git@git.711media.de:TYPO3/sem_sitepackage.git"
-        },
-        {
-            "type": "vcs",
-            "url": "git@git.711media.de:TYPO3/sem_content.git"
-        },
-        {
             "type": "composer",
             "url": "https://composer.typo3.org"
         }
@@ -45,10 +37,7 @@
         "typo3-ter/static-info-tables": "^6.3.0",
         "typo3-ter/vhs": "^3.0.0",
         "typo3-ter/rlmp-language-detection": "^7.0.8",
-        "typo3-ter/gridelements": "^7.0.5",
-
-        "media711/sem-sitepackage": "^1.0.0",
-        "media711/sem-content": "^1.0.0"
+        "typo3-ter/gridelements": "^7.0.5"
     },
     "extra": {
         "typo3/cms": {
@@ -64,7 +53,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Helhum\\TYPO3\\Distribution\\": "src/"
+            "Helhum\\TYPO3\\Distribution\\": "src/",
+            "Rudyk\\SemExContent\\": "web/typo3conf/ext/sem_ex_content/Classes/"
         }
     },
     "scripts": {
