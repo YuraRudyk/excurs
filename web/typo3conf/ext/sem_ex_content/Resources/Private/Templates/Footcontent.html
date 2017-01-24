@@ -1,0 +1,21 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"  data-namespace-typo3-fluid="true">
+
+     <f:if condition="{footcontents}">
+        <f:for each="{footcontents}" as="footcontent">
+
+            <footer>
+                <div class="in_futer">
+                    <div class="in_foot_left">
+                        <p>© {footcontent.copyright}</p>
+                    </div>
+                    <div class="in_foot_right">
+                        <p><i class="material-icons phone_in_review">local phone</i>{footcontent.firstPhone}  <i class="material-icons phone_in_review">local phone</i> {footcontent.secondPhone}   <i class="material-icons mail_in_review">mail outline</i>{footcontent.email}</p>
+                    </div>
+                </div>
+            </footer>
+
+        </f:for>
+    </f:if>
+
+</html>

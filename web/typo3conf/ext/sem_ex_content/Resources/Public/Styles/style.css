@@ -34,7 +34,6 @@ body{
 header{
   max-width: 1360px;
   height: 580px;
-  background: url(images/heder_fon.png) no-repeat center center ;
   background-size: cover;
   padding-right: 200px;
 }
@@ -62,17 +61,17 @@ header{
           text-shadow: 0 0 1px;
         }
         input#name{
-          background-image: url(images/p.png);
+          background-image: url(../../../../../../fileadmin/user_upload/images/p.png);
           background-position: left center;
           background-repeat: no-repeat;
         }
         input#phone{
-          background-image: url(images/t.png);
+          background-image: url(../../../../../../fileadmin/user_upload/images/t.png);
           background-position: left center;
           background-repeat: no-repeat;
         }
         select#excursion{
-          background-image: url(images/d.png);
+          background-image: url(../../../../../../fileadmin/user_upload/images/d.png);
           background-position: left center;
           background-repeat: no-repeat;
         }
@@ -147,6 +146,14 @@ nav .nav input{
           text-shadow: 0 0 1px;
         }
         .input_in_nav_all{
+          width: auto;
+          padding-left: 10px;
+          padding-right: 10px;
+          height: 40px;
+          border-radius: 4px;
+          text-shadow: 0 0 1px;
+        }
+        .input_in_nav_reviews{
           width: auto;
           padding-left: 10px;
           padding-right: 10px;
@@ -233,16 +240,16 @@ nav .nav input{
             left:-115px;
           }
             .ua{
-              background-image: url(images/ukr.png);
+              background-image: url(../../../../../../fileadmin/user_upload/images/ukr.png);
               background-size: cover;
   
             }
             .ru{
-              background-image: url(images/rus.png);
+              background-image: url(../../../../../../fileadmin/user_upload/images/rus.png);
               background-size: cover;
             }
             .en{
-              background-image: url(images/eng.png);
+              background-image: url(../../../../../../fileadmin/user_upload/images/eng.png);
               background-size: cover;
               
             }

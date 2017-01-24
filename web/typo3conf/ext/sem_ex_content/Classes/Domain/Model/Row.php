@@ -13,4 +13,5 @@ use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 class Row extends AbstractEntity
 {
     use ContentType\HeadcontentTrait;
+    use ContentType\FootcontentTrait;
 }

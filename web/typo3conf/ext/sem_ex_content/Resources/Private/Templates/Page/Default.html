@@ -4,15 +4,10 @@
     <f:section name="Main">
         <main>
 
-            {v:resource.record.fal(table: 'pages', field: 'media', uid: 2)
-             -> v:iterator.first()
-             -> v:variable.set(name: 'header_background')}
+            <div class="out_block">  
+                <f:format.raw>{content_header}</f:format.raw>
 
-            
-            <div class="out_block">
-                <header style="background-image: url({header_background.url});">
-                    <f:format.raw>{content_header}</f:format.raw>
-                </header>
+                <f:format.raw>{content_footer}</f:format.raw>
             </div>
 
         </main>

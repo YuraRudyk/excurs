@@ -40,3 +40,24 @@ TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
 $iconRegistry->registerIcon('semexcontent-headcontent', \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class, [
     'source' => 'EXT:sem_ex_content/Resources/Public/Icons/headcontent.svg'
 ]);
+
+
+
+// ============================================
+// Register Footcontent content element
+// ============================================
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPlugin(
+    [
+        'Footer content',
+        'semexcontent_footcontent',
+        'EXT:sem_ex_content/Resources/Public/Icons/footcontent.svg'
+    ],
+    'CType'
+);
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_semexcontent_domain_model_footcontent');
+
+$iconRegistry->registerIcon('semexcontent-footcontent', \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class, [
+    'source' => 'EXT:sem_ex_content/Resources/Public/Icons/footcontent.svg'
+]);

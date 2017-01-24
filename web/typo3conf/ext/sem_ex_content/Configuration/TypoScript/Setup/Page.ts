@@ -37,6 +37,7 @@ page {
         ajax = https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js
         bootstrap = EXT:sem_ex_content/Resources/Public/JavaScript/bootstrap.js
         myjs = EXT:sem_ex_content/Resources/Public/JavaScript/script.js
+        button = EXT:sem_ex_content/Resources/Public/JavaScript/button.js
 
     }
 
@@ -57,6 +58,11 @@ page {
             content_header < styles.content.get
             content_header.select {
                 pidInList = 2
+            }
+
+            content_footer < styles.content.get
+            content_footer.select {
+                pidInList = 5
             }
         }
     }    
