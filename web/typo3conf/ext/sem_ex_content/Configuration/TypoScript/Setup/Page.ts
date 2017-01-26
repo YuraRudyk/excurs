@@ -38,6 +38,7 @@ page {
         bootstrap = EXT:sem_ex_content/Resources/Public/JavaScript/bootstrap.js
         myjs = EXT:sem_ex_content/Resources/Public/JavaScript/script.js
         button = EXT:sem_ex_content/Resources/Public/JavaScript/button.js
+        select_build = EXT:sem_ex_content/Resources/Public/JavaScript/select_build.js
 
     }
 
@@ -63,6 +64,11 @@ page {
             content_footer < styles.content.get
             content_footer.select {
                 pidInList = 5
+            }
+
+            content_excursion < styles.content.get
+            content_excursion.select {
+                pidInList = 3
             }
         }
     }    

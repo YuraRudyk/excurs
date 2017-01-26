@@ -6,8 +6,8 @@ if (!defined('TYPO3_MODE')) {
 
 return [
     'ctrl' => [
-        'title'                    => 'footer content',
-        'label'                    => 'copyright',
+        'title'                    => 'excursion',
+        'label'                    => 'name',
         'tstamp'                   => 'tstamp',
         'crdate'                   => 'crdate',
         'cruser_id'                => 'cruser_id',
@@ -28,10 +28,10 @@ return [
             'fe_group'  => 'fe_group'
         ],
         'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath('sem_ex_content')
-            . 'Resources/Public/Icons/footcontent.svg',
+            . 'Resources/Public/Icons/excursion.svg',
     ],
     'interface' => [
-        'showRecordFieldList' => 'first_phone,second_phone,email,copyright'
+        'showRecordFieldList' => 'name,price,class,image'
     ],
     'columns' => [
         'sys_language_uid' => [
@@ -57,9 +57,9 @@ return [
                 'items'      => [
                     ['', 0],
                 ],
-                'foreign_table'       => 'tx_semexcontent_domain_model_footcontent',
-                'foreign_table_where' => 'AND tx_semexcontent_domain_model_footcontent.pid=###CURRENT_PID### '
-                    . ' AND tx_semexcontent_domain_model_footcontent.sys_language_uid IN (-1,0)',
+                'foreign_table'       => 'tx_semexcontent_domain_model_excursion',
+                'foreign_table_where' => 'AND tx_semexcontent_domain_model_excursion.pid=###CURRENT_PID### '
+                    . ' AND tx_semexcontent_domain_model_excursion.sys_language_uid IN (-1,0)',
             ]
         ],
         'l10n_diffsource' => [
@@ -143,36 +143,48 @@ return [
             ],
         ],
 
-        'first_phone' => [
-            'label'  => 'first phone',
+        'name' => [
+            'label'  => 'Header of excursion',
             'config' => [
                 'type' => 'input',
                 'eval' => 'trim'
             ]
         ],
-        'second_phone' => [
-            'label'  => 'second phone',
+        'price' => [
+            'label'  => 'Price',
             'config' => [
                 'type' => 'input',
                 'eval' => 'trim'
             ]
         ],
-        'email' => [
-            'label'  => 'email',
-            'config' => [
-                'type' => 'input',
-                'eval' => 'trim'
-            ]
+        'image' => [
+            'label'  => 'Image',
+            'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
+                'image',
+                [
+                    'appearance' => [
+                        'createNewRelationLinkTitle' =>
+                            'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference',
+                    ],
+                    'foreign_types' => $GLOBALS['TCA']['tt_content']['columns']['image']['config']['foreign_types'],
+                    'maxitems'      => 1
+                ],
+                $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
+            ),
         ],
-        'copyright' => [
-            'label'  => 'copyright',
+        'class' => [
+            'label'  => 'Select type',
             'config' => [
-                'type' => 'input',
-                'eval' => 'trim'
-            ]
+                'type'       => 'select',
+                'renderType' => 'selectSingle',
+                'items'      => [
+                    ['bus excursion', 'bus'],
+                    ['city excursion', 'lviv'],
+                ],
+            ],
         ],
-        'footcontent' => [
-            'label'  => 'footcontent',
+        'excursion' => [
+            'label'  => 'excursion',
             'config' => [
                 'type' => 'passthrough'
             ]
@@ -181,7 +193,7 @@ return [
 
     'types' => [
         [
-            'showitem' => 'first_phone, second_phone, email, copyright, sys_language_uid, l10n_parent, hidden'
+            'showitem' => 'name, price, class, image, sys_language_uid, l10n_parent, hidden'
         ]
     ]
     

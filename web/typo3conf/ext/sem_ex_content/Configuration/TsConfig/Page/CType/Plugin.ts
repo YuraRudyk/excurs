@@ -18,8 +18,18 @@ mod.wizards.newContentElement.wizardItems.special {
             tt_content_defValues {
                 CType = semexcontent_footcontent
             }
+        },
+
+        semexcontent_excursion {
+            title          = semexcontent_excursion
+            description    = semexcontent_excursion
+            iconIdentifier = semexcontent-excursion
+
+            tt_content_defValues {
+                CType = semexcontent_excursion
+            }
         }
     }
 
-    show := addToList(semexcontent_headcontent, semexcontent_footcontent)
+    show := addToList(semexcontent_headcontent, semexcontent_footcontent, semexcontent_excursion)
 }

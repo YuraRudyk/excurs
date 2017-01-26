@@ -61,3 +61,22 @@ $iconRegistry->registerIcon('semexcontent-headcontent', \TYPO3\CMS\Core\Imaging\
 $iconRegistry->registerIcon('semexcontent-footcontent', \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class, [
     'source' => 'EXT:sem_ex_content/Resources/Public/Icons/footcontent.svg'
 ]);
+
+// ============================================
+// Register Excursion content element
+// ============================================
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPlugin(
+    [
+        'excursions',
+        'semexcontent_excursion',
+        'EXT:sem_ex_content/Resources/Public/Icons/excursion.svg'
+    ],
+    'CType'
+);
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_semexcontent_domain_model_excursion');
+
+$iconRegistry->registerIcon('semexcontent-excursion', \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class, [
+    'source' => 'EXT:sem_ex_content/Resources/Public/Icons/excursion.svg'
+]);

@@ -8,8 +8,8 @@
   font-style: normal;
   font-weight: 400;
   src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
-  src: local('Material Icons'),
-       local('MaterialIcons-Regular'),
+  src: local('../Fonts/Material Icons'),
+       local('../Fonts/MaterialIcons-Regular'),
        url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
        url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
        url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
@@ -286,7 +286,7 @@ section.excursions{
         div.shadow_eye:hover{
           background-color: rgba(0,0,0,0.5);
           border-radius: 4px 4px 0 0;
-          background-image: url(images/oko.png);
+          background-image: url(../../../../../../fileadmin/user_upload/images/oko.png);
           background-position: center center;
           background-repeat: no-repeat; 
         }
