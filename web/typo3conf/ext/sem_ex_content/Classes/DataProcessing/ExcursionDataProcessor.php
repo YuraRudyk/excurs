@@ -27,8 +27,9 @@ class ExcursionDataProcessor extends AbstractDataProcessor
     ) {
         
         $processedData['excursions'] = $this->objectManager->get(RowRepository::class)->findByUid($cObj->data['uid'])
-                                                                                      ->getExcursion();      
-                                              
+                                                                                      ->getExcursion(); 
+
+             
         return $processedData;
     }
 }

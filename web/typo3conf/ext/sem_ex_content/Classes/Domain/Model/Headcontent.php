@@ -56,6 +56,26 @@ class Headcontent extends AbstractEntity
      */
     protected $subheader;
 
+        /**
+     * @var string
+     */
+    protected $formName;
+
+    /**
+     * @var string
+     */
+    protected $formPhone;
+
+    /**
+     * @var string
+     */
+    protected $formSelect;
+
+    /**
+     * @var string
+     */
+    protected $formSend;
+
     /**
      * @return string
      */
@@ -202,6 +222,70 @@ class Headcontent extends AbstractEntity
     public function setSubheader($subheader)
     {
         $this->subheader = $subheader;
+    }
+
+        /**
+     * @return string
+     */
+    public function getFormName()
+    {
+        return $this->formName;
+    }
+
+    /**
+     * @param string $formName
+     */
+    public function setFormName($formName)
+    {
+        $this->formName = $formName;
+    }
+
+        /**
+     * @return string
+     */
+    public function getFormPhone()
+    {
+        return $this->formPhone;
+    }
+
+    /**
+     * @param string $formPhone
+     */
+    public function setFormPhone($formPhone)
+    {
+        $this->formPhone = $formPhone;
+    }
+
+        /**
+     * @return string
+     */
+    public function getFormSelect()
+    {
+        return $this->formSelect;
+    }
+
+    /**
+     * @param string $formSelect
+     */
+    public function setFormSelect($formSelect)
+    {
+        $this->formSelect = $formSelect;
+    }
+
+        /**
+     * @return string
+     */
+    public function getFormSend()
+    {
+        return $this->formSend;
+    }
+
+    /**
+     * @param string $formSend
+     */
+    public function setFormSend($formSend)
+    {
+        $this->formSend = $formSend;
     }
 
     

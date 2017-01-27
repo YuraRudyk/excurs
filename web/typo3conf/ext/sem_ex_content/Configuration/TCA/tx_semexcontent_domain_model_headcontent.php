@@ -31,7 +31,7 @@ return [
             . 'Resources/Public/Icons/headcontent.svg',
     ],
     'interface' => [
-        'showRecordFieldList' => 'first_phone,second_phone,email,first_menu,second_menu,third_menu,fourth_menu,header,subheader'
+        'showRecordFieldList' => 'first_phone,second_phone,email,first_menu,second_menu,third_menu,fourth_menu,header,subheader,form_name,form_phone,form_select,form_send'
     ],
     'columns' => [
         'sys_language_uid' => [
@@ -211,12 +211,40 @@ return [
             'config' => [
                 'type' => 'passthrough'
             ]
-        ]
+        ],
+        'form_name' => [
+            'label'  => 'your name',
+            'config' => [
+                'type' => 'input',
+                'eval' => 'trim'
+            ]
+        ],
+        'form_select' => [
+            'label'  => 'select excursion',
+            'config' => [
+                'type' => 'input',
+                'eval' => 'trim'
+            ]
+        ],
+        'form_phone' => [
+            'label'  => 'your phone',
+            'config' => [
+                'type' => 'input',
+                'eval' => 'trim'
+            ]
+        ],
+        'form_send' => [
+            'label'  => 'send',
+            'config' => [
+                'type' => 'input',
+                'eval' => 'trim'
+            ]
+        ],
     ],
 
     'types' => [
         [
-            'showitem' => 'first_phone, second_phone, email, first_menu, second_menu, third_menu, fourth_menu, header, subheader, sys_language_uid, l10n_parent, hidden'
+            'showitem' => 'first_phone, second_phone, email, first_menu, second_menu, third_menu, fourth_menu, header, subheader, form_name, form_phone, form_select, form_send, sys_language_uid, l10n_parent, hidden'
         ]
     ]
     

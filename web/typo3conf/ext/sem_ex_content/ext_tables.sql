@@ -40,6 +40,10 @@ CREATE TABLE tx_semexcontent_domain_model_headcontent (
     second_menu      varchar(100) DEFAULT ''  NOT NULL,
     third_menu       varchar(100) DEFAULT ''  NOT NULL,
     fourth_menu      varchar(100) DEFAULT ''  NOT NULL,
+    form_name        varchar(100) DEFAULT ''  NOT NULL,
+    form_phone       varchar(100) DEFAULT ''  NOT NULL,
+    form_select      varchar(100) DEFAULT ''  NOT NULL,
+    form_send        varchar(100) DEFAULT ''  NOT NULL,
     headcontent      int(11)      DEFAULT '0' NOT NULL,
 
     PRIMARY KEY (uid),
@@ -120,6 +124,9 @@ CREATE TABLE tx_semexcontent_domain_model_excursion (
     price            varchar(100) DEFAULT ''  NOT NULL,
     class            varchar(30)  DEFAULT ''  NOT NULL,
     image            int(11) unsigned DEFAULT '0' NOT NULL,
+    ad_info          mediumtext,
+    description      mediumtext,
+    order_ex         varchar(250)     DEFAULT ''  NOT NULL,
     excursion        int(11)          DEFAULT '0' NOT NULL,
 
     PRIMARY KEY (uid),

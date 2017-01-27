@@ -31,7 +31,7 @@ return [
             . 'Resources/Public/Icons/excursion.svg',
     ],
     'interface' => [
-        'showRecordFieldList' => 'name,price,class,image'
+        'showRecordFieldList' => 'name,price,class,image,image1,image2,image3,ad_info,description,order_ex'
     ],
     'columns' => [
         'sys_language_uid' => [
@@ -158,7 +158,7 @@ return [
             ]
         ],
         'image' => [
-            'label'  => 'Image',
+            'label'  => 'Main image',
             'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
                 'image',
                 [
@@ -167,7 +167,7 @@ return [
                             'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference',
                     ],
                     'foreign_types' => $GLOBALS['TCA']['tt_content']['columns']['image']['config']['foreign_types'],
-                    'maxitems'      => 1
+                    'maxitems'      => 4
                 ],
                 $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
             ),
@@ -183,6 +183,35 @@ return [
                 ],
             ],
         ],
+        'ad_info' => [
+            'defaultExtras' => 'richtext:rte_transform[mode=ts_css]',
+            'label'         => 'Additional information',
+            'config'        => [
+                'type'    => 'text',
+                'cols'    => 80,
+                'rows'    => 15,
+                'eval'    => 'trim',
+                'softref' => 'typolink_tag,images,email[subst],url',
+            ]
+        ],
+        'description' => [
+            'defaultExtras' => 'richtext:rte_transform[mode=ts_css]',
+            'label'         => 'Description of excursion',
+            'config'        => [
+                'type'    => 'text',
+                'cols'    => 80,
+                'rows'    => 15,
+                'eval'    => 'trim',
+                'softref' => 'typolink_tag,images,email[subst],url',
+            ]
+        ],
+        'order_ex' => [
+            'label'  => 'Order excursion',
+            'config' => [
+                'type' => 'input',
+                'eval' => 'trim'
+            ]
+        ],
         'excursion' => [
             'label'  => 'excursion',
             'config' => [
@@ -193,7 +222,7 @@ return [
 
     'types' => [
         [
-            'showitem' => 'name, price, class, image, sys_language_uid, l10n_parent, hidden'
+            'showitem' => 'name, price, class, image, imag, image2, image3, ad_info, description, order_ex, sys_language_uid, l10n_parent, hidden'
         ]
     ]
     

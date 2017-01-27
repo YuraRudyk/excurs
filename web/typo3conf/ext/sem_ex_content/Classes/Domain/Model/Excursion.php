@@ -29,9 +29,45 @@ class Excursion extends AbstractEntity
     protected $image = null;
 
     /**
+    * image
+    *
+    * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
+    */
+    protected $image1 = null;
+
+    /**
+    * image
+    *
+    * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
+    */
+    protected $image2 = null;
+
+    /**
+    * image
+    *
+    * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
+    */
+    protected $image3 = null;
+
+    /**
      * @var string
      */
     protected $class;
+
+    /**
+     * @var string
+     */
+    protected $adInfo;
+
+    /**
+     * @var string
+     */
+    protected $description;
+
+    /**
+     * @var string
+     */
+    protected $order_ex;
 
     
     /**
@@ -79,7 +115,7 @@ class Excursion extends AbstractEntity
     }
 
 
-     /**
+    /**
     * Returns the image
     *
     * @return \TYPO3\CMS\Extbase\Domain\Model\FileReference $image
@@ -88,6 +124,7 @@ class Excursion extends AbstractEntity
     {
         return $this->image;
     }
+
 
     /**
      * @return string
@@ -104,6 +141,54 @@ class Excursion extends AbstractEntity
     public function setClass($class)
     {
         $this->class = $class;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAdInfo()
+    {
+        return $this->adInfo;
+    }
+    
+    /**
+     * @param string $adInfo
+     */
+    public function setAdInfo($adInfo)
+    {
+        $this->adInfo = $adInfo;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+    
+    /**
+     * @param string $description
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+    }
+
+    /**
+     * @return string
+     */
+    public function getOrderEx()
+    {
+        return $this->order_ex;
+    }
+    
+    /**
+     * @param string $order_ex
+     */
+    public function setOrderEx($order_ex)
+    {
+        $this->order_ex = $order_ex;
     }
 
     
