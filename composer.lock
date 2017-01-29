@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "bd3a833b5a63e5946554ce70bc9bf7d5",
+    "hash": "740fd679b614d09935af2193dd36164f",
     "content-hash": "ff219bbfa7afad6737220575cab60642",
     "packages": [
         {
@@ -285,16 +285,16 @@
         },
         {
             "name": "helhum/typo3-console-plugin",
-            "version": "1.6.0",
+            "version": "1.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3-Console/typo3-console-plugin.git",
-                "reference": "6b964fb572692c2ada04979aeb2a2faf16ca60c0"
+                "reference": "9d79c0a271f1d6a4d51c74936b9325ad1a1a698e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3-Console/typo3-console-plugin/zipball/6b964fb572692c2ada04979aeb2a2faf16ca60c0",
-                "reference": "6b964fb572692c2ada04979aeb2a2faf16ca60c0",
+                "url": "https://api.github.com/repos/TYPO3-Console/typo3-console-plugin/zipball/9d79c0a271f1d6a4d51c74936b9325ad1a1a698e",
+                "reference": "9d79c0a271f1d6a4d51c74936b9325ad1a1a698e",
                 "shasum": ""
             },
             "require": {
@@ -336,7 +336,7 @@
                 "plugin",
                 "typo3 console"
             ],
-            "time": "2017-01-17 09:36:15"
+            "time": "2017-01-26 11:55:03"
         },
         {
             "name": "mso/idna-convert",
@@ -1105,10 +1105,10 @@
         },
         {
             "name": "typo3-ter/static-info-tables",
-            "version": "6.4.1",
+            "version": "6.4.2",
             "dist": {
                 "type": "t3x",
-                "url": "https://typo3.org/extensions/repository/download/static_info_tables/6.4.1/t3x/",
+                "url": "https://typo3.org/extensions/repository/download/static_info_tables/6.4.2/t3x/",
                 "reference": null,
                 "shasum": null
             },
@@ -1139,7 +1139,7 @@
                 }
             ],
             "description": "Data and API for countries, languages and currencies.",
-            "time": "2017-01-19 05:03:41"
+            "time": "2017-01-24 18:00:08"
         },
         {
             "name": "typo3-ter/vhs",

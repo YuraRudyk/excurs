@@ -228,6 +228,12 @@ return [
             'packagePath' => 'typo3conf/ext/sem_ex_content/',
             'suggestions' => [],
         ],
+        'sem_ex_review' => [
+            'composerName' => 'sem_ex_review',
+            'state' => 'active',
+            'packagePath' => 'typo3conf/ext/sem_ex_review/',
+            'suggestions' => [],
+        ],
         'static_info_tables' => [
             'composerName' => 'sjbr/static-info-tables',
             'state' => 'active',
@@ -244,6 +250,12 @@ return [
             'composerName' => 'dmitryd/typo3-realurl',
             'state' => 'active',
             'packagePath' => 'typo3conf/ext/realurl/',
+            'suggestions' => [],
+        ],
+        'sem_services' => [
+            'composerName' => 'sem_services',
+            'state' => 'active',
+            'packagePath' => 'typo3conf/ext/sem_services/',
             'suggestions' => [],
         ],
         'typo3_console' => [

@@ -63,7 +63,7 @@ page {
 
             content_footer < styles.content.get
             content_footer.select {
-                pidInList = 4
+                pidInList = 5
             }
 
             content_excursion < styles.content.get
