@@ -10,5 +10,8 @@ class ServiceController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
     {
         $serviceRepository = $this->objectManager->get(ServiceRepository::class);       
         $this->view->assign('services', $serviceRepository->findAll());
+
+        var_dump($this->objectManager->get(ServiceRepository::class));
+        die();
     }
 }
