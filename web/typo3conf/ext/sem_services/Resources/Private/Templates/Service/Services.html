@@ -1,34 +1,25 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
       xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers" data-namespace-typo3-fluid="true">
 
-<div class="row">
-    <f:for each="{services}" as="service">
-        <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="single_service">
-                <!-- Single Service image -->
-                <div class="single_service_img">
-                    <v:media.exists file="{service.image.originalResource.publicUrl}">
-                        <f:image treatIdAsReference="1" image="{service.image}"/>
-                    </v:media.exists>
-                </div>
-                <!-- Single Service title -->
-                <div class="single_service_title">
-                    <h4>{service.header}</h4>
-                </div>
-                <!-- Single Service content -->
-                <div class="single_service_content">
-                    <div class="table">
-                        <div class="table_cell">
-                            <f:format.html>{service.description}</f:format.html>
-                        </div>
-                    </div>
-                </div>
-                <div class="learn_more">
-                    <a data-target="#service_details" data-toggle="modal" href="#"><h4>Learn More</h4></a>
-                </div>
-            </div>
-        </div>
-    </f:for>
-</div>
+    <section class="reviews" id="reviews">
+      <p class="head_rev">Відгуки</p>
+      <hr class="line">
+      <div class="review_content">
+        <p class="review">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed dLorem ipsum dolor sit amet, consectetur adipisicing elit, sed d Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed d Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed d Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed d Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed d Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed d v Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed dLorem ipsum dolor sit amet, consectetur adipisicing elit, sed ddLorem ipsum dolor sit amet, consectetur adipisicing elit, sed dffffffffffffffffff  ffffffffffffffffffffffff fffffffffffffff fffffffffffffffffffffff fffffffffff
+        </p>
+        <p class="author">Вячеслав Михайлов - Генеральний директор jellyBean Solutions.</p>
+      </div>
+    </section>
+
+    <section class="make_reviews">
+      <p class="head_make_rev">Залиште свій відгук</p>
+      <div class="review_form">
+        <input type="text" class="form-control" id="name_review" name="name_review" placeholder="Ваше ім'я">
+        <input type="text" class="form-control" id="mail_review" name="mail_review" placeholder="Ваш E-mail">
+        <input type="text" class="form-control" id="review" name="review" placeholder="Текст відгуку">
+        <input type="submit" class="form-control" id="button_review" value="Відправити">
+      </div>
+    </section>
 
 </html>
