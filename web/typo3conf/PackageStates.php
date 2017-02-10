@@ -246,6 +246,12 @@ return [
             'packagePath' => 'typo3conf/ext/realurl/',
             'suggestions' => [],
         ],
+        'sem_services' => [
+            'composerName' => 'sem_services',
+            'state' => 'active',
+            'packagePath' => 'typo3conf/ext/sem_services/',
+            'suggestions' => [],
+        ],
         'typo3_console' => [
             'composerName' => 'typo3_console',
             'state' => 'active',

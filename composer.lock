@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2518abe6d7505f49ce8cc1f8cf780ec8",
+    "hash": "2a3b7e7f407fe910aae92666fee36ced",
     "content-hash": "ff219bbfa7afad6737220575cab60642",
     "packages": [
         {
@@ -716,16 +716,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v2.8.16",
+            "version": "v2.8.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "2e18b8903d9c498ba02e1dfa73f64d4894bb6912"
+                "reference": "f3c234cd8db9f7e520a91d695db7d8bb5daeb7a4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/2e18b8903d9c498ba02e1dfa73f64d4894bb6912",
-                "reference": "2e18b8903d9c498ba02e1dfa73f64d4894bb6912",
+                "url": "https://api.github.com/repos/symfony/console/zipball/f3c234cd8db9f7e520a91d695db7d8bb5daeb7a4",
+                "reference": "f3c234cd8db9f7e520a91d695db7d8bb5daeb7a4",
                 "shasum": ""
             },
             "require": {
@@ -773,7 +773,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2017-01-08 20:43:03"
+            "time": "2017-02-06 12:04:06"
         },
         {
             "name": "symfony/debug",
@@ -834,7 +834,7 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v2.8.16",
+            "version": "v2.8.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
@@ -942,16 +942,16 @@
         },
         {
             "name": "symfony/process",
-            "version": "v2.7.23",
+            "version": "v2.7.24",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "69b111c92407c9c41d88b7f52e615e3093940712"
+                "reference": "f2d1eda0b736880a8d64c03fb29f9567ad0a4376"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/69b111c92407c9c41d88b7f52e615e3093940712",
-                "reference": "69b111c92407c9c41d88b7f52e615e3093940712",
+                "url": "https://api.github.com/repos/symfony/process/zipball/f2d1eda0b736880a8d64c03fb29f9567ad0a4376",
+                "reference": "f2d1eda0b736880a8d64c03fb29f9567ad0a4376",
                 "shasum": ""
             },
             "require": {
@@ -987,7 +987,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2017-01-02 20:30:00"
+            "time": "2017-02-02 13:55:53"
         },
         {
             "name": "typo3-ter/gridelements",
