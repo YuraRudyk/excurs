@@ -7,7 +7,7 @@
 
   var all_excursions_block = document.querySelectorAll(".excursion");
 
-    var describe_of_excursion = document.querySelectorAll(".excursion_describe")[0];
+  var describe_of_excursion = document.querySelectorAll(".excursion_describe")[0];
   var order_excursion = document.querySelectorAll(".order_excursion")[0];
 
   var nav_lviv = document.querySelectorAll(".input_in_nav_lviv")[0];
@@ -41,19 +41,38 @@
   var smal_foto_3 = document.querySelectorAll(".smal_foto_3")[0];
   var addition_info = document.querySelectorAll(".addition_info")[0];
   var main_description = document.querySelectorAll(".main_description")[0];
+
+  function loadDoc(value) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        // document.getElementById("test").innerHTML =
+        console.log(this.responseText);
+      }
+    };
+    xhttp.open("GET", "http://excursions.lh/index.php?id=1&excursion=" + value + "&tx__%5Baction%5D=description&tx__%5Bcontroller%5D=Description", true);
+    xhttp.send();
+  }
  
   function showDescription(){
-    describe_of_excursion.style.display = "block";
-    var excursion_var = JSON.parse(window[this.id]);
+    // describe_of_excursion.style.display = "block";
+    // var excursion_var = JSON.parse(window[this.id]);
    
-    in_name_excursion.innerHTML = excursion_var.in_name_excursion;
-    main_foto.style = excursion_var.main_foto;
-    smal_foto_0.style = excursion_var.smal_foto_0;
-    smal_foto_1.style = excursion_var.smal_foto_1;
-    smal_foto_2.style = excursion_var.smal_foto_2;
-    smal_foto_3.style = excursion_var.smal_foto_3;
-    addition_info.innerHTML = excursion_var.addition_info;
-    main_description.innerHTML = excursion_var.main_description;
+    // in_name_excursion.innerHTML = excursion_var.in_name_excursion;
+    // main_foto.style = excursion_var.main_foto;
+    // smal_foto_0.style = excursion_var.smal_foto_0;
+    // smal_foto_1.style = excursion_var.smal_foto_1;
+    // smal_foto_2.style = excursion_var.smal_foto_2;
+    // smal_foto_3.style = excursion_var.smal_foto_3;
+    // addition_info.innerHTML = excursion_var.addition_info;
+    // main_description.innerHTML = excursion_var.main_description;
+    loadDoc(this.id);
+
+    console.log(this.id);
+    // console.log(document.querySelectorAll(".test")[0].innerHTML);
+    // document.querySelectorAll(".test")[0].innerHTML = this.id;
+
+
   }
 
   function hideDescription(){
