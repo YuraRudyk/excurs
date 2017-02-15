@@ -240,6 +240,12 @@ return [
             'packagePath' => 'typo3conf/ext/rlmp_language_detection/',
             'suggestions' => [],
         ],
+        'phpunit' => [
+            'composerName' => 'oliverklee/phpunit',
+            'state' => 'active',
+            'packagePath' => 'typo3conf/ext/phpunit/',
+            'suggestions' => [],
+        ],
         'realurl' => [
             'composerName' => 'dmitryd/typo3-realurl',
             'state' => 'active',
@@ -256,6 +262,12 @@ return [
             'composerName' => 'sem_services',
             'state' => 'active',
             'packagePath' => 'typo3conf/ext/sem_services/',
+            'suggestions' => [],
+        ],
+        'test' => [
+            'composerName' => 'test',
+            'state' => 'active',
+            'packagePath' => 'typo3conf/ext/test/',
             'suggestions' => [],
         ],
         'typo3_console' => [

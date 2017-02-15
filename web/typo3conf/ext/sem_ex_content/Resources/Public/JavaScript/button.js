@@ -46,11 +46,10 @@
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
-        // document.getElementById("test").innerHTML =
-        console.log(this.responseText);
+        document.getElementById("test").innerHTML = this.responseText;
       }
     };
-    xhttp.open("GET", "http://excursions.lh/index.php?id=1&excursion=" + value + "&tx__%5Baction%5D=description&tx__%5Bcontroller%5D=Description", true);
+    xhttp.open("GET", "index.php?id=1&tx_semexcursion_pi1%5Baction%5D=description&tx_semexcursion_pi1%5Bcontroller%5D=Excursion&cHash=cad12fb6921cfc7eab18136c17ce7596", true);
     xhttp.send();
   }
  
@@ -68,7 +67,6 @@
     // main_description.innerHTML = excursion_var.main_description;
     loadDoc(this.id);
 
-    console.log(this.id);
     // console.log(document.querySelectorAll(".test")[0].innerHTML);
     // document.querySelectorAll(".test")[0].innerHTML = this.id;
 

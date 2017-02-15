@@ -6,7 +6,6 @@ if (!defined ('TYPO3_MODE')) die ('Access denied.');
     'Rudyk.' . $_EXTKEY,
     'pi1',
     array(
-        'Excursion' => 'excursion',
-        'Description' => 'description',
+        'Excursion' => 'index, description',
     )
 );

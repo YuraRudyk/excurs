@@ -37,7 +37,8 @@
         "typo3-ter/static-info-tables": "^6.3.0",
         "typo3-ter/vhs": "^3.0.0",
         "typo3-ter/rlmp-language-detection": "^7.0.8",
-        "typo3-ter/gridelements": "^7.0.5"
+        "typo3-ter/gridelements": "^7.0.5",
+        "typo3-ter/phpunit": "^4.8.24"
     },
     "extra": {
         "typo3/cms": {
@@ -56,7 +57,8 @@
             "Helhum\\TYPO3\\Distribution\\": "src/",
             "Rudyk\\SemExContent\\": "web/typo3conf/ext/sem_ex_content/Classes/",
             "Rudyk\\SemServices\\": "web/typo3conf/ext/sem_services/Classes/",
-            "Rudyk\\SemExcursion\\": "web/typo3conf/ext/sem_excursion/Classes/"
+            "Rudyk\\SemExcursion\\": "web/typo3conf/ext/sem_excursion/Classes/",
+            "Rudyk\\Test\\": "web/typo3conf/ext/test/Classes/"
         }
     },
     "scripts": {

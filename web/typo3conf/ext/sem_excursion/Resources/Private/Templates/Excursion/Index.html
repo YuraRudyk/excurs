@@ -1,0 +1,28 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers" data-namespace-typo3-fluid="true">
+
+    <f:if condition="{excursions}">
+        
+        <section class="excursions">
+            <div class="container">
+                <div class="row">
+                    <f:for each="{excursions}" as="excursion">
+                        <div class="col-md-3" >
+                            <div class="in_row excursion {excursion.class}" id="{excursion.uid}">
+                                <div class="foto" style="background:url({excursion.image.originalResource.publicUrl}) content-box center center; background-size: cover;">
+                                    <div class="shadow_eye"></div>
+                                </div>
+                                <div class="desription">
+                                    <div class="name_ex">{excursion.name}</div>
+                                    <p class="price"><span class="glyphicon glyphicon-ok-circle"> </span> {excursion.price} <span class="glyphicon glyphicon-menu-right"></span><span class="glyphicon glyphicon-menu-right"></span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </f:for>
+                </div>
+            </div>
+        </section>
+        
+    </f:if>
+
+</html>
