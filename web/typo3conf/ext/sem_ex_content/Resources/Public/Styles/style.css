@@ -509,7 +509,7 @@ footer{
   z-index: 1;
   overflow-y: scroll;
   color: white;
-  display: none;
+  display: block;
 }
     .in_excursion_describe{
       width:960px;
@@ -528,7 +528,7 @@ footer{
       .close{
         height: 40px;
         width: 40px;
-        background: url(images/Ñ%2585.png) no-repeat center center ;
+        background: url(../../../../../../fileadmin/user_upload/images/close.png) no-repeat center center ;
         background-size: cover;
         color:white;
         opacity:1;

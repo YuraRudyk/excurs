@@ -11,11 +11,15 @@ class ExcursionController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
         $this->view->assign('excursions', $this->objectManager->get(ExcursionRepository::class)->findAll());
     }
 
-    
-    public function descriptionAction()
+    /**
+     * Displays
+     *
+     * @param \Rudyk\SemExcursion\Domain\Model\Excursion $excursion The blog the post belongs to
+     * @return string 
+     */
+    public function descriptionAction(\Rudyk\SemExcursion\Domain\Model\Excursion $excursion)
     {       
-        // $this->view->assign('excursion', $this->objectManager->get(ExcursionRepository::class)->findByUid(1));
-        // 
-        return "<h1>some test</h1>";
+        $this->view->assign('excursion', $excursion);
+        
     }
 }

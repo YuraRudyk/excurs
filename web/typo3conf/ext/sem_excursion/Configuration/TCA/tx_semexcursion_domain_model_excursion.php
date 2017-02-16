@@ -145,18 +145,12 @@ return [
             ]
         ],
         'image' => [
-            'label'  => 'Main image',
+            'exclude' => 1,
+            'label' => 'Add images',
             'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
-                'image',
-                [
-                    'appearance' => [
-                        'createNewRelationLinkTitle' =>
-                            'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference',
-                    ],
-                    'foreign_types' => $GLOBALS['TCA']['tt_content']['columns']['image']['config']['foreign_types'],
-                    'maxitems'      => 4
-                ],
-                $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
+                    'image',
+                    array('minitems'=>0,'maxitems'=>4),
+                    $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
             ),
         ],
         'class' => [
@@ -208,7 +202,7 @@ return [
     ],
     'types' => [
         [
-            'showitem' => 'name, price, class, image, imag, image2, image3, ad_info, description, order_ex, sys_language_uid, l10n_parent, hidden'
+            'showitem' => 'name, price, class, image, ad_info, description, order_ex, sys_language_uid, l10n_parent, hidden'
         ]
     ]
 ];

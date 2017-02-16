@@ -7,7 +7,7 @@
 
   var all_excursions_block = document.querySelectorAll(".excursion");
 
-  var describe_of_excursion = document.querySelectorAll(".excursion_describe")[0];
+  // var describe_of_excursion = document.querySelectorAll(".excursion_describe")[0];
   var order_excursion = document.querySelectorAll(".order_excursion")[0];
 
   var nav_lviv = document.querySelectorAll(".input_in_nav_lviv")[0];
@@ -19,7 +19,7 @@
   // // for(var i=0; i<nav_button.length; i++) {nav_button[i].addEventListener("click", display, true)};
 
   for(var i=0; i<all_excursions_block.length; i++) {all_excursions_block[i].addEventListener("click", showDescription, true)};
-  // document.querySelectorAll(".close_in_ex")[0].addEventListener("click", hideDescription, true);
+  
   // document.querySelectorAll(".close_order_ex")[0].addEventListener("click", hideOrderExcursion, true);
   // document.querySelectorAll(".button_review")[0].addEventListener("click", showOrderExcursion, true);
   nav_lviv.addEventListener("click", display_lviv, true);
@@ -47,9 +47,10 @@
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
         document.getElementById("test").innerHTML = this.responseText;
+        document.querySelectorAll(".close_in_ex")[0].addEventListener("click", hideDescription, true);
       }
     };
-    xhttp.open("GET", "index.php?id=1&tx_semexcursion_pi1%5Baction%5D=description&tx_semexcursion_pi1%5Bcontroller%5D=Excursion&cHash=cad12fb6921cfc7eab18136c17ce7596", true);
+    xhttp.open("GET", "index.php?id=1&tx_semexcursion_pi1%5Bexcursion%5D="+value+"&tx_semexcursion_pi1%5Baction%5D=description&tx_semexcursion_pi1%5Bcontroller%5D=Excursion", true);
     xhttp.send();
   }
  
@@ -74,7 +75,7 @@
   }
 
   function hideDescription(){
-    describe_of_excursion.style.display = "none";
+    document.querySelectorAll(".excursion_describe")[0].style.display = "none";
   }
 
   function showOrderExcursion(){

@@ -9,7 +9,7 @@
                     <f:for each="{excursions}" as="excursion">
                         <div class="col-md-3" >
                             <div class="in_row excursion {excursion.class}" id="{excursion.uid}">
-                                <div class="foto" style="background:url({excursion.image.originalResource.publicUrl}) content-box center center; background-size: cover;">
+                                <div class="foto" style="background:url({excursion.image.0.originalResource.publicUrl}) content-box center center; background-size: cover;">
                                     <div class="shadow_eye"></div>
                                 </div>
                                 <div class="desription">

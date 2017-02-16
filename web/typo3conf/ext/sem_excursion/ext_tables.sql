@@ -29,7 +29,7 @@ CREATE TABLE tx_semexcursion_domain_model_excursion (
     name             varchar(250) DEFAULT ''  NOT NULL,
     price            varchar(100) DEFAULT ''  NOT NULL,
     class            varchar(30)  DEFAULT ''  NOT NULL,
-    image            int(11) unsigned DEFAULT '0' NOT NULL,
+    image            varchar(255) DEFAULT ''  NOT NULL,
     ad_info          mediumtext,
     description      mediumtext,
     order_ex         varchar(250)     DEFAULT ''  NOT NULL,
