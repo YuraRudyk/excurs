@@ -13,9 +13,11 @@ class Review extends AbstractEntity {
     protected $title = '';
 
     /**
-     * @var \DateTime
+     * @var string
      */
-    protected $date = NULL;
+    protected $ = '';
+
+    
 
     /**
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Rudyk\SemServices\Domain\Model\Review>
