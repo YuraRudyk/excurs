@@ -31,10 +31,10 @@ RTE {
 
         proc {
             # Allow tags to be processed
-            allowTags := addToList(hr, address, p, br, strong)
+            allowTags := addToList(hr, address, p, br, strong, b)
 
             # Allow tags outside <div> and <p> tags
-            allowTagsOutside := addToList(ul, table, div, a, br, hr, address, p, strong)
+            allowTagsOutside := addToList(ul, table, div, a, br, hr, address, p, strong, b)
 
             # Allow classes
             allowedClasses = text-left, text-center, text-right, text-justify

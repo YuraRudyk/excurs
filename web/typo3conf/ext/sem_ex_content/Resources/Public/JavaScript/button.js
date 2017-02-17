@@ -8,7 +8,7 @@
   var all_excursions_block = document.querySelectorAll(".excursion");
 
   // var describe_of_excursion = document.querySelectorAll(".excursion_describe")[0];
-  var order_excursion = document.querySelectorAll(".order_excursion")[0];
+  var order_excursion;
 
   var nav_lviv = document.querySelectorAll(".input_in_nav_lviv")[0];
   var nav_bus = document.querySelectorAll(".input_in_nav_bus")[0];
@@ -48,6 +48,9 @@
       if (this.readyState == 4 && this.status == 200) {
         document.getElementById("test").innerHTML = this.responseText;
         document.querySelectorAll(".close_in_ex")[0].addEventListener("click", hideDescription, true);
+        order_excursion = document.querySelectorAll(".order_excursion")[0];
+        document.querySelectorAll(".close_order_ex")[0].addEventListener("click", hideOrderExcursion, true);
+        document.querySelectorAll(".button_review")[0].addEventListener("click", showOrderExcursion, true);
       }
     };
     xhttp.open("GET", "index.php?id=1&tx_semexcursion_pi1%5Bexcursion%5D="+value+"&tx_semexcursion_pi1%5Baction%5D=description&tx_semexcursion_pi1%5Bcontroller%5D=Excursion", true);
