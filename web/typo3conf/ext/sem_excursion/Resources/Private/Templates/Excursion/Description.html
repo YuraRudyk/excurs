@@ -1,0 +1,29 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers" data-namespace-typo3-fluid="true">
+      <div id="description"></div>
+        <div class="excursion_describe">
+          <div class="in_excursion_describe">
+            <p class="name_excursion"> 
+              <span class="in_name_excursion">{excursion.name}</span> 
+              <span class="close close_in_ex"></span> 
+            </p>
+
+            <div class="excursion_describe_content">
+              <div class="main_foto" style="background: url({excursion.image.0.originalResource.publicUrl}) no-repeat center center; background-size: cover;"></div>
+              <div class="all_foto">
+                <f:for each="{excursion.image}" as="file" >
+                  <div class="smal_foto smal_foto_0" style="background: url({file.originalResource.publicUrl}) no-repeat center center; background-size: cover;"></div>
+                </f:for>
+              </div>
+              <div class="addition_info">
+                {excursion.adInfo}
+              </div>
+              <div class="main_description">
+                {excursion.description}
+              </div>
+              <input type="button" class="form-control button_review" value="{excursion.orderEx}">
+            </div>
+          </div>
+        </div>
+      </div>
+</html>

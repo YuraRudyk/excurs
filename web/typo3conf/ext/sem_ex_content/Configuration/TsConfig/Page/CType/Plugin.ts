@@ -20,16 +20,16 @@ mod.wizards.newContentElement.wizardItems.special {
             }
         },
 
-        semexcontent_excursion {
-            title          = semexcontent_excursion
-            description    = semexcontent_excursion
-            iconIdentifier = semexcontent-excursion
+        semexcontent_ordercontent {
+            title          = semexcontent_ordercontent
+            description    = semexcontent_ordercontent
+            iconIdentifier = semexcontent-ordercontent
 
             tt_content_defValues {
-                CType = semexcontent_excursion
+                CType = semexcontent_ordercontent
             }
         }
     }
 
-    show := addToList(semexcontent_headcontent, semexcontent_footcontent, semexcontent_excursion)
+    show := addToList(semexcontent_headcontent, semexcontent_footcontent, semexcontent_ordercontent)
 }

@@ -1,0 +1,35 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<div class="row">
+    <f:for each="{services}" as="service">
+        
+        <section class="reviews" id="reviews">
+          <p class="head_rev">{service.header}</p>
+          <hr class="line">
+          <div class="review_content">
+            <p class="review">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed dLorem ipsum dolor sit amet, consectetur adipisicing elit, sed d Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed d Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed d Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed d Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed d Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed d v Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed dLorem ipsum dolor sit amet, consectetur adipisicing elit, sed ddLorem ipsum dolor sit amet, consectetur adipisicing elit, sed dffffffffffffffffff  ffffffffffffffffffffffff fffffffffffffff fffffffffffffffffffffff fffffffffff
+            </p>
+            <p class="author">Вячеслав Михайлов - Генеральний директор jellyBean Solutions.</p>
+          </div>
+        </section>
+
+        <section class="make_reviews">
+          <p class="head_make_rev">{service.description}</p>
+          <div class="review_form">
+            <f:form method="post" controller="Review" action="create" name="newReview" object="{newReview}" arguments="{service: service}">
+              <input type="text" class="form-control" id="name_review" name="name_review" placeholder="{service.name}">
+              <input type="text" class="form-control" id="mail_review" name="mail_review" placeholder="{service.email}">
+              <input type="text" class="form-control" id="review" name="review" placeholder="{service.texts}">
+              <input type="submit" class="form-control" id="button_review" value="{service.send}">
+            </f:form>
+          </div>
+        </section>
+
+
+
+    </f:for>
+</div>
+
+</html>

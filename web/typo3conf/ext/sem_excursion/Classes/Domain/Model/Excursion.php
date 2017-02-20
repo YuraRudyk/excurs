@@ -1,14 +1,8 @@
 <?php
-namespace Rudyk\SemExContent\Domain\Model;
+namespace Rudyk\SemExcursion\Domain\Model;
 
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 
-/**
- * Represents Headcontent content element
- *
- * @package sem_ex_content
- * @author Yura Rudyk
- */
 class Excursion extends AbstractEntity
 {
     /**
@@ -22,10 +16,11 @@ class Excursion extends AbstractEntity
     protected $price;
 
     /**
-    * image
-    *
-    * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
-    */
+         * image
+         *
+         * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference>
+         * @lazy
+         */
     protected $image = null;
 
     /**
@@ -33,7 +28,7 @@ class Excursion extends AbstractEntity
     *
     * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
     */
-    protected $image1 = null;
+    protected $test = null;
 
     /**
     * image
@@ -67,7 +62,7 @@ class Excursion extends AbstractEntity
     /**
      * @var string
      */
-    protected $order_ex;
+    protected $orderEx;
 
     
     /**
@@ -104,22 +99,22 @@ class Excursion extends AbstractEntity
     }
 
     /**
-    * Sets the image
-    *
-    * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $image
-    * @return void
-    */
+     * sets image
+     *
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $image
+     * @return void
+     */
     public function setImage($image) 
     {
-        $this->image = (string)$image;
+        $this->image = $image;
     }
 
 
     /**
-    * Returns the image
-    *
-    * @return \TYPO3\CMS\Extbase\Domain\Model\FileReference $image
-    */
+     * returns image
+     *
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+     */
     public function getImage() 
     {
         return $this->image;
@@ -180,32 +175,15 @@ class Excursion extends AbstractEntity
      */
     public function getOrderEx()
     {
-        return $this->order_ex;
+        return $this->orderEx;
     }
     
     /**
-     * @param string $order_ex
+     * @param string $orderEx
      */
-    public function setOrderEx($order_ex)
+    public function setOrderEx($orderEx)
     {
-        $this->order_ex = $order_ex;
+        $this->orderEx = $orderEx;
     }
 
-    
-    
-    /**
-     * @return \Rudyk\SemExContent\Domain\Model\Row
-     */
-    public function getExcursion()
-    {
-        return $this->excursion;
-    }
-
-    /**
-     * @param \Rudyk\SemExContent\Domain\Model\Row $excursion
-     */
-    public function setExcursion($excursion)
-    {
-        $this->excursion = $excursion;
-    }
 }

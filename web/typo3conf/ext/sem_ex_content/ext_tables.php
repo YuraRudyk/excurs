@@ -63,20 +63,20 @@ $iconRegistry->registerIcon('semexcontent-footcontent', \TYPO3\CMS\Core\Imaging\
 ]);
 
 // ============================================
-// Register Excursion content element
+// Register Ordercontent content element
 // ============================================
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPlugin(
     [
-        'excursions',
-        'semexcontent_excursion',
-        'EXT:sem_ex_content/Resources/Public/Icons/excursion.svg'
+        'Order content',
+        'semexcontent_ordercontent',
+        'EXT:sem_ex_content/Resources/Public/Icons/ordercontent.svg'
     ],
     'CType'
 );
 
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_semexcontent_domain_model_excursion');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_semexcontent_domain_model_ordercontent');
 
-$iconRegistry->registerIcon('semexcontent-excursion', \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class, [
-    'source' => 'EXT:sem_ex_content/Resources/Public/Icons/excursion.svg'
+$iconRegistry->registerIcon('semexcontent-ordercontent', \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class, [
+    'source' => 'EXT:sem_ex_content/Resources/Public/Icons/ordercontent.svg'
 ]);

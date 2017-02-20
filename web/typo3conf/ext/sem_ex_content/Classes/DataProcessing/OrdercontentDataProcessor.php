@@ -8,7 +8,7 @@ use Rudyk\SemExContent\DataProcessing\AbstractDataProcessor;
 use TYPO3\CMS\Core\Resource\StorageRepository;
 
 
-class ExcursionDataProcessor extends AbstractDataProcessor
+class OrdercontentDataProcessor extends AbstractDataProcessor
 {
     /**
      * Process data for the content element "Coolfact"
@@ -26,10 +26,9 @@ class ExcursionDataProcessor extends AbstractDataProcessor
         array $processedData
     ) {
         
-        $processedData['excursions'] = $this->objectManager->get(RowRepository::class)->findByUid($cObj->data['uid'])
-                                                                                      ->getExcursion(); 
-
-             
+        $processedData['ordercontents'] = $this->objectManager->get(RowRepository::class)->findByUid($cObj->data['uid'])
+                                                                                         ->getOrdercontent();      
+                                              
         return $processedData;
     }
 }

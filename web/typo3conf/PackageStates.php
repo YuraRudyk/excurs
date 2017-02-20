@@ -240,10 +240,34 @@ return [
             'packagePath' => 'typo3conf/ext/rlmp_language_detection/',
             'suggestions' => [],
         ],
+        'phpunit' => [
+            'composerName' => 'oliverklee/phpunit',
+            'state' => 'active',
+            'packagePath' => 'typo3conf/ext/phpunit/',
+            'suggestions' => [],
+        ],
         'realurl' => [
             'composerName' => 'dmitryd/typo3-realurl',
             'state' => 'active',
             'packagePath' => 'typo3conf/ext/realurl/',
+            'suggestions' => [],
+        ],
+        'sem_excursion' => [
+            'composerName' => 'sem_excursion',
+            'state' => 'active',
+            'packagePath' => 'typo3conf/ext/sem_excursion/',
+            'suggestions' => [],
+        ],
+        'sem_services' => [
+            'composerName' => 'sem_services',
+            'state' => 'active',
+            'packagePath' => 'typo3conf/ext/sem_services/',
+            'suggestions' => [],
+        ],
+        'test' => [
+            'composerName' => 'test',
+            'state' => 'active',
+            'packagePath' => 'typo3conf/ext/test/',
             'suggestions' => [],
         ],
         'typo3_console' => [

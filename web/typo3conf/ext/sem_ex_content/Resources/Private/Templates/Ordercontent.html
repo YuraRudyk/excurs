@@ -1,0 +1,30 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"  data-namespace-typo3-fluid="true">
+
+    <f:if condition="{ordercontents}">
+        <f:for each="{ordercontents}" as="order">
+
+            <div class="order_excursion">
+              <div class="in_order_excursion">
+                <p class="name">{order.header}<span class="close close_order_ex"></span></p>
+
+              <form role="form" action="index.html" method="post" name="form7" enctype="multipart/form-data">
+                <div class="order_form">
+                  <input type="text" class="form-control" id="order_name" name="order_name" placeholder="{order.name}">
+                  <input type="text" class="form-control" id="order_phone" name="order_phone" placeholder="{order.phone}">
+                  <input type="text" class="form-control" id="order_email" name="order_email" placeholder="{order.email}">
+                  <input type="text" class="form-control" id="order_excursion" name="order_excursion" >
+                  <input type="number" class="form-control" id="order_number" name="order_number" placeholder="{order.quantity}">
+                  <input type="text" class="form-control" id="order_wish" name="order_wish" placeholder="{order.wish}">
+                  <input type="submit" class="form-control" id="order_button" name="order_button" value="{order.send}">
+                </div>
+               </form>
+
+                
+              </div>
+            </div>
+
+        </f:for>
+    </f:if>
+
+</html>

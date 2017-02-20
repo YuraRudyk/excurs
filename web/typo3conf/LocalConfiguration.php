@@ -3,17 +3,25 @@ return [
     'BE' => [
         'debug' => true,
         'explicitADmode' => 'explicitAllow',
-        'installToolPassword' => '$P$CJI.QUC8lwSEs2biiHKccQFXe8KJzc0',
+        'installToolPassword' => '$P$CkUiZDLvWr7NdktBGdTkLv.425wLKr/',
         'loginSecurityLevel' => 'rsa',
     ],
     'EXT' => [
         'extConf' => [
             'filemetadata' => 'a:0:{}',
+            'phpunit' => 'a:5:{s:17:"excludeextensions";s:8:"lib, div";s:13:"selenium_host";s:9:"localhost";s:13:"selenium_port";s:4:"4444";s:16:"selenium_browser";s:8:"*firefox";s:19:"selenium_browserurl";s:0:"";}',
             'rsaauth' => 'a:1:{s:18:"temporaryDirectory";s:0:"";}',
             'saltedpasswords' => 'a:2:{s:3:"BE.";a:4:{s:21:"saltedPWHashingMethod";s:41:"TYPO3\\CMS\\Saltedpasswords\\Salt\\PhpassSalt";s:11:"forceSalted";i:0;s:15:"onlyAuthService";i:0;s:12:"updatePasswd";i:1;}s:3:"FE.";a:5:{s:7:"enabled";i:1;s:21:"saltedPWHashingMethod";s:41:"TYPO3\\CMS\\Saltedpasswords\\Salt\\PhpassSalt";s:11:"forceSalted";i:0;s:15:"onlyAuthService";i:0;s:12:"updatePasswd";i:1;}}',
             'sem_ex_content' => 'a:0:{}',
+            'sem_excursion' => 'a:0:{}',
             'sem_services' => 'a:0:{}',
             't3editor' => 'a:0:{}',
+            'test' => 'a:0:{}',
+        ],
+    ],
+    'EXTCONF' => [
+        'lang' => [
+            'availableLanguages' => [],
         ],
     ],
     'FE' => [
