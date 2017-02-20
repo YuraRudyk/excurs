@@ -37,9 +37,9 @@ return [
                 'items'      => [
                     ['', 0],
                 ],
-                'foreign_table'       => 'tx_semservices_domain_model_service',
-                'foreign_table_where' => 'AND tx_semservices_domain_model_service.pid=###CURRENT_PID### '
-                    . ' AND tx_semservices_domain_model_service.sys_language_uid IN (-1,0)',
+                'foreign_table'       => 'tx_semservices_domain_model_review',
+                'foreign_table_where' => 'AND tx_semservices_domain_model_review.pid=###CURRENT_PID### '
+                    . ' AND tx_semservices_domain_model_review.sys_language_uid IN (-1,0)',
             ]
         ],
         'l10n_diffsource' => [
@@ -130,7 +130,7 @@ return [
             ]
         ],
 
-        'header' => [
+        'author' => [
             'label'  => 'Review',
             'config' => [
                 'type' => 'input',
@@ -146,57 +146,32 @@ return [
                 'max'  => 255
             ]
         ],
-        'name' => [
-            'label'  => 'Your name',
-            'config' => [
-                'type' => 'input',
-                'eval' => 'trim,required',
-                'max'  => 255
-            ]
-        ],
-        'email' => [
-            'label'  => 'Your email',
-            'config' => [
-                'type' => 'input',
-                'eval' => 'trim,required',
-                'max'  => 255
-            ]
-        ],
-        'texts' => [
-            'label'  => 'Text of review',
-            'config' => [
-                'type' => 'input',
-                'eval' => 'trim,required',
-                'max'  => 255
-            ]
-        ],
-        'send' => [
-            'label'  => 'Send',
-            'config' => [
-                'type' => 'input',
-                'eval' => 'trim,required',
-                'max'  => 255
-            ]
-        ],
-        'reviews' => [
+        'service' => [
             'exclude' => 1,
-            'label' => 'reviews in service',
+            'label' => 'service',
             'config' => [
-                'type' => 'inline',
+                'type' => 'select',
+                'foreign_table' => 'tx_semservices_domain_model_service',
+                'maxitems' => 1,
+            ]
+        ],
+        'related_reviews' => [
+            'exclude' => 1,
+            'label' => 'related reviews',
+            'config' => [
+                'type' => 'select',
+                'size' => 10,
+                'maxitems' => 9999,
+                'autoSizeMax' => 30,
+                'multiple' => 0,
                 'foreign_table' => 'tx_semservices_domain_model_review',
-                'foreign_field' => 'service',
-                'foreign_sortby' => 'sorting',
-                'maxitems' => 999999,
-                'appearance' => [
-                    'collapseAll' => 1,
-                    'expandSingle' => 1,
-                ],
+                'foreign_table_where' => 'AND ###THIS_UID### != tx_semservices_domain_model_review.uid',
             ]
         ],
     ],
     'types' => [
         [
-            'showitem' => 'header, description, name, email, texts, send, reviews'
+            'showitem' => 'author, description, related_reviews, service'
         ]
     ]
 ];

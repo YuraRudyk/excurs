@@ -35,6 +35,14 @@ class Service extends AbstractEntity
      **/
     protected $send = '';
 
+    /**
+     * The reviews
+     *
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Rudyk\SemServices\Domain\Model\Review>
+     * 
+     */
+    protected $reviews = NULL;
+
     
 
     public function setHeader($header) 
@@ -101,4 +109,22 @@ class Service extends AbstractEntity
         return $this->send;
     }
 
+    /**
+     * Adds a review
+     *
+     * @param Review $review
+     * @return void
+     */
+    public function addReview(Review $review) {
+        $this->reviews->attach($review);
+    }
+
+    /**
+     * Returns all reviews
+     *
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+     */
+    public function getReview() {
+        return $this->reviews;
+    }
 }

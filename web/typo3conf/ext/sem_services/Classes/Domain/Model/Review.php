@@ -8,149 +8,101 @@ class Review extends AbstractEntity {
 
     /**
      * @var string
-     * @validate StringLength(minimum = 3, maximum = 50)
+     *
      */
-    protected $title = '';
+    protected $author = '';
 
     /**
      * @var string
      */
-    protected $ = '';
+    protected $description = '';
 
-    
+    /**
+     * @var \Rudyk\SemServices\Domain\Model\service
+     */
+    protected $service = NULL;
 
     /**
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Rudyk\SemServices\Domain\Model\Review>
      * @lazy
      */
-    protected $relatedPosts = NULL;
+    protected $relatedReviews = NULL;
 
     /**
-     * Constructs this post
-     */
-    public function __construct() {
-        $this->tags = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-        $this->comments = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-        $this->relatedPosts = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-        $this->date = new \DateTime();
-    }
-
-
-    /**
-     * Setter for title
+     * Sets the service this post is part of
      *
-     * @param string $title
+     * @param \Rudyk\SemServices\Domain\Model\Service $service The service
      * @return void
      */
-    public function setTitle($title) {
-        $this->title = $title;
+    public function setService(\Rudyk\SemServices\Domain\Model\Service $service) {
+        $this->service = $service;
     }
 
     /**
-     * Getter for title
+     * Returns the service this post is part of
+     *
+     * @return \Rudyk\SemServices\Domain\Model\Service The service
+     */
+    public function getService() {
+        return $this->service;
+    }
+
+    /**
+     * Setter for author
+     *
+     * @param string $author
+     * @return void
+     */
+    public function setAuthor($author) {
+        $this->author = $author;
+    }
+
+    /**
+     * Getter for author
      *
      * @return string
      */
-    public function getTitle() {
-        return $this->title;
+    public function getAuthor() {
+        return $this->author;
     }
 
     /**
-     * Setter for date
+     * Setter for description
      *
-     * @param \DateTime $date
+     * @param string $description
      * @return void
      */
-    public function setDate(\DateTime $date) {
-        $this->date = $date;
+    public function setDescription($description) {
+        $this->description = $description;
     }
 
     /**
-     * Getter for date
-     *
-     *
-     * @return \DateTime
-     */
-    public function getDate() {
-        return $this->date;
-    }
-
-    /**
-     * Getter for content
+     * Getter for description
      *
      * @return string
      */
-    public function getContent() {
-        return $this->content;
-    }
-
-    /**
-     * Setter for the comments to this post
-     *
-     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $comments An Object Storage of related Comment instances
-     * @return void
-     */
-    public function setComments(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $comments) {
-        $this->comments = $comments;
-    }
-
-    /**
-     * Adds a comment to this post
-     *
-     * @param Comment $comment
-     * @return void
-     */
-    public function addComment(Comment $comment) {
-        $this->comments->attach($comment);
-    }
-
-    /**
-     * Removes Comment from this post
-     *
-     * @param Comment $commentToDelete
-     * @return void
-     */
-    public function removeComment(Comment $commentToDelete) {
-        $this->comments->detach($commentToDelete);
-    }
-
-    /**
-     * Remove all comments from this post
-     *
-     * @return void
-     */
-    public function removeAllComments() {
-        $comments = clone $this->comments;
-        $this->comments->removeAll($comments);
-    }
-
-    /**
-     * Returns the comments to this post
-     *
-     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage holding instances of Comment
-     */
-    public function getComments() {
-        return $this->comments;
+    public function getDescription() {
+        return $this->description;
     }
 
     /**
      * Setter for the related posts
      *
-     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $relatedPosts An Object Storage containing related Posts instances
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $relatedReviews
      * @return void
      */
-    public function setRelatedPosts(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $relatedPosts) {
-        $this->relatedPosts = $relatedPosts;
+    public function setRelatedReviews(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $relatedReviews) {
+        $this->relatedReviews = $relatedReviews;
     }
 
     /**
      * Adds a related post
      *
-     * @param Post $post
+     * @param Review $review
      * @return void
      */
-    public function addRelatedPost(Post $post) {
-        $this->relatedPosts->attach($post);
+    public function addRelatedReviews(Review $review) {
+        $this->relatedReviews->attach($review);
     }
 
     /**
@@ -158,18 +110,18 @@ class Review extends AbstractEntity {
      *
      * @return void
      */
-    public function removeAllRelatedPosts() {
-        $relatedPosts = clone $this->relatedPosts;
-        $this->relatedPosts->removeAll($relatedPosts);
+    public function removeAllRelatedReviews() {
+        $relatedReviews = clone $this->relatedReviews;
+        $this->relatedReviews->removeAll($relatedReviews);
     }
 
     /**
-     * Returns the related posts
+     * Returns the related reviews
      *
-     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage holding instances of Post
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage holding instances of Review
      */
-    public function getRelatedPosts() {
-        return $this->relatedPosts;
+    public function getRelatedReviews() {
+        return $this->relatedReviews;
     }
 }
 ?>
