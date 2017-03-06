@@ -6,7 +6,6 @@ if (!defined ('TYPO3_MODE')) die ('Access denied.');
     'Rudyk.' . $_EXTKEY,
     'pi1',
     array(
-        'Service' => 'services',
-        'Review' => 'create',
+        'Service' => 'services, create',
     )
 );

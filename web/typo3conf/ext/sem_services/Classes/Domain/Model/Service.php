@@ -8,11 +8,6 @@ class Service extends AbstractEntity
     /**
      * @var string
      **/
-    protected $header = '';
-
-    /**
-     * @var string
-     **/
     protected $description = '';
 
     /**
@@ -25,35 +20,7 @@ class Service extends AbstractEntity
      **/
     protected $email = '';
 
-    /**
-     * @var string
-     **/
-    protected $texts = '';
 
-    /**
-     * @var string
-     **/
-    protected $send = '';
-
-    /**
-     * The reviews
-     *
-     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Rudyk\SemServices\Domain\Model\Review>
-     * 
-     */
-    protected $reviews = NULL;
-
-    
-
-    public function setHeader($header) 
-    {
-        $this->header = (string)$header;
-    }
-
-    public function getHeader() 
-    {
-        return $this->header;
-    }
 
     public function setDescription($description) 
     {
@@ -87,44 +54,4 @@ class Service extends AbstractEntity
         return $this->email;
     }
 
-
-    public function setTexts($texts) 
-    {
-        $this->texts = (string)$texts;
-    }
-
-    public function getTexts() 
-    {
-        return $this->texts;
-    }
-
-
-    public function setSend($send) 
-    {
-        $this->send = (string)$send;
-    }
-
-    public function getSend() 
-    {
-        return $this->send;
-    }
-
-    /**
-     * Adds a review
-     *
-     * @param Review $review
-     * @return void
-     */
-    public function addReview(Review $review) {
-        $this->reviews->attach($review);
-    }
-
-    /**
-     * Returns all reviews
-     *
-     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
-     */
-    public function getReview() {
-        return $this->reviews;
-    }
 }

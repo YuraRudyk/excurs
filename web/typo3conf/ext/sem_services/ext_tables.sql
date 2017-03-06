@@ -25,14 +25,9 @@ CREATE TABLE tx_semservices_domain_model_service (
     sorting          int(11)      DEFAULT '0' NOT NULL,
     fe_group         varchar(100) DEFAULT '0' NOT NULL,
 
-
-    header           varchar(400)     NOT NULL,
     description      mediumtext       NOT NULL,
     name             varchar(400)     NOT NULL,
     email            varchar(400)     NOT NULL,
-    texts            varchar(400)     NOT NULL,
-    send             varchar(400)     NOT NULL,
-    reviews          varchar(255) DEFAULT ''  NOT NULL,
 
     PRIMARY KEY (uid),
     KEY parent (pid),

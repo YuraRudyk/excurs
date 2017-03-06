@@ -2,34 +2,49 @@
       xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers" data-namespace-typo3-fluid="true">
 
 <div class="row">
-    <f:for each="{services}" as="service">
+    
         
         <section class="reviews" id="reviews">
-          <p class="head_rev">{service.header}</p>
+          <p class="head_rev">
+            <f:translate key="service.review"/>
+          </p>
           <hr class="line">
-          <div class="review_content">
-            <p class="review">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed dLorem ipsum dolor sit amet, consectetur adipisicing elit, sed d Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed d Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed d Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed d Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed d Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed d v Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed dLorem ipsum dolor sit amet, consectetur adipisicing elit, sed ddLorem ipsum dolor sit amet, consectetur adipisicing elit, sed dffffffffffffffffff  ffffffffffffffffffffffff fffffffffffffff fffffffffffffffffffffff fffffffffff
-            </p>
-            <p class="author">Вячеслав Михайлов - Генеральний директор jellyBean Solutions.</p>
+
+          <div class="reviews">
+            <f:for each="{services}" as="service">
+              <div class="review_content">
+                <p class="review">
+                    {service.description}
+                </p>
+                <p class="author">{service.name}</p>
+              </div>
+            </f:for>
           </div>
         </section>
 
         <section class="make_reviews">
-          <p class="head_make_rev">{service.description}</p>
+          <p class="head_make_rev">
+            <f:translate key="test"/>
+          </p>
           <div class="review_form">
-            <f:form method="post" controller="Review" action="create" name="newReview" object="{newReview}" arguments="{service: service}">
-              <input type="text" class="form-control" id="name_review" name="name_review" placeholder="{service.name}">
-              <input type="text" class="form-control" id="mail_review" name="mail_review" placeholder="{service.email}">
-              <input type="text" class="form-control" id="review" name="review" placeholder="{service.texts}">
-              <input type="submit" class="form-control" id="button_review" value="{service.send}">
+            <f:form method="POST" controller="Service" action="create" name="Service" object="{Service}" >
+<f:comment>
+              <input type="text" class="form-control" id="namsde" name="tx_service_pi1[Service][name]" 
+                     placeholder="{f:translate(key: 'service.your.name')}">
+              <input type="text" class="form-control" id="mail_review" name="email"
+                     placeholder="{f:translate(key: 'service.your.email')}">
+              <input type="text" class="form-control" id="review" name="description"
+                     placeholder="{f:translate(key: 'service.text.review')}">
+              <input type="submit" class="form-control" id="button_review"
+                     value="{f:translate(key: 'service.send')}">
+</f:comment>
+
+                     <f:form.textfield name="name" value="default value" />
+                     <f:form.submit value="Send Mail" />
             </f:form>
           </div>
         </section>
 
-
-
-    </f:for>
 </div>
 
 </html>

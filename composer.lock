@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d5ce63ada0a4a0ce8cd3381621a8e849",
+    "hash": "9c4d68697f0c8120a44994ca089c3a2c",
     "content-hash": "63da478671b7a386e49eb333f398b41b",
     "packages": [
         {
@@ -1067,16 +1067,16 @@
         },
         {
             "name": "typo3-ter/realurl",
-            "version": "2.1.7",
+            "version": "2.1.8",
             "dist": {
                 "type": "t3x",
-                "url": "https://typo3.org/extensions/repository/download/realurl/2.1.7/t3x/",
+                "url": "https://typo3.org/extensions/repository/download/realurl/2.1.8/t3x/",
                 "reference": null,
                 "shasum": null
             },
             "require": {
                 "php": ">= 5.4.0, <= 7.0.999",
-                "typo3/cms-core": ">= 6.2.0, <= 8.4.999"
+                "typo3/cms-core": ">= 6.2.0, <= 8.6.999"
             },
             "conflict": {
                 "typo3-ter/cooluri": "*",
@@ -1100,7 +1100,7 @@
                 }
             ],
             "description": "Makes TYPO3 URLs search engine friendly. Donations are welcome to dmitry.dulepov@gmail.com. They help to support the extension!",
-            "time": "2017-02-13 09:58:02"
+            "time": "2017-02-26 17:49:03"
         },
         {
             "name": "typo3-ter/rlmp-language-detection",
@@ -1268,16 +1268,16 @@
         },
         {
             "name": "typo3/cms",
-            "version": "7.6.15",
+            "version": "7.6.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3/TYPO3.CMS.git",
-                "reference": "83c94ad5ee39aa4faeebfdd8d0eb66a7450f2ab1"
+                "reference": "4cf10b1d32c1c4c074d14cacba64890640937015"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3/TYPO3.CMS/zipball/83c94ad5ee39aa4faeebfdd8d0eb66a7450f2ab1",
-                "reference": "83c94ad5ee39aa4faeebfdd8d0eb66a7450f2ab1",
+                "url": "https://api.github.com/repos/TYPO3/TYPO3.CMS/zipball/4cf10b1d32c1c4c074d14cacba64890640937015",
+                "reference": "4cf10b1d32c1c4c074d14cacba64890640937015",
                 "shasum": ""
             },
             "require": {
@@ -1355,6 +1355,7 @@
                 "typo3/cms-workspaces": "self.version"
             },
             "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.0",
                 "mikey179/vfsstream": "1.6.0",
                 "phpunit/phpunit": "~4.8.0",
                 "symfony/polyfill-mbstring": "~1.0"
@@ -1462,7 +1463,7 @@
                 "extbase",
                 "typo3"
             ],
-            "time": "2017-01-03 11:24:12"
+            "time": "2017-02-28 10:42:40"
         },
         {
             "name": "typo3/cms-composer-installers",

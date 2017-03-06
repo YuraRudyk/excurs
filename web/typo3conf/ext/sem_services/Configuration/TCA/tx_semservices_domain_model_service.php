@@ -129,21 +129,11 @@ return [
                 'default' => 0
             ]
         ],
-
-        'header' => [
-            'label'  => 'Review',
-            'config' => [
-                'type' => 'input',
-                'eval' => 'trim,required',
-                'max'  => 255
-            ]
-        ],
         'description' => [
             'label'         => 'Leave your comment',
             'config' => [
                 'type' => 'input',
                 'eval' => 'trim,required',
-                'max'  => 255
             ]
         ],
         'name' => [
@@ -158,45 +148,14 @@ return [
             'label'  => 'Your email',
             'config' => [
                 'type' => 'input',
-                'eval' => 'trim,required',
+                'eval' => 'trim',
                 'max'  => 255
-            ]
-        ],
-        'texts' => [
-            'label'  => 'Text of review',
-            'config' => [
-                'type' => 'input',
-                'eval' => 'trim,required',
-                'max'  => 255
-            ]
-        ],
-        'send' => [
-            'label'  => 'Send',
-            'config' => [
-                'type' => 'input',
-                'eval' => 'trim,required',
-                'max'  => 255
-            ]
-        ],
-        'reviews' => [
-            'exclude' => 1,
-            'label' => 'reviews in service',
-            'config' => [
-                'type' => 'inline',
-                'foreign_table' => 'tx_semservices_domain_model_review',
-                'foreign_field' => 'service',
-                'foreign_sortby' => 'sorting',
-                'maxitems' => 999999,
-                'appearance' => [
-                    'collapseAll' => 1,
-                    'expandSingle' => 1,
-                ],
             ]
         ],
     ],
     'types' => [
         [
-            'showitem' => 'header, description, name, email, texts, send, reviews'
+            'showitem' => 'description, name, email'
         ]
     ]
 ];
