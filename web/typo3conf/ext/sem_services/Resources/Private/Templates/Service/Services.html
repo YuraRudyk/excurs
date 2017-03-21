@@ -11,7 +11,7 @@
           <hr class="line">
 
           <div class="reviews">
-            <f:for each="{services}" as="service">
+            <f:for each="{services}" as="service" reverse="1">
               <div class="review_content">
                 <p class="review">
                     {service.description}
@@ -27,20 +27,22 @@
             <f:translate key="test"/>
           </p>
           <div class="review_form">
-            <f:form method="POST" controller="Service" action="create" name="Service" object="{Service}" >
-<f:comment>
-              <input type="text" class="form-control" id="namsde" name="tx_service_pi1[Service][name]" 
-                     placeholder="{f:translate(key: 'service.your.name')}">
-              <input type="text" class="form-control" id="mail_review" name="email"
-                     placeholder="{f:translate(key: 'service.your.email')}">
-              <input type="text" class="form-control" id="review" name="description"
-                     placeholder="{f:translate(key: 'service.text.review')}">
-              <input type="submit" class="form-control" id="button_review"
-                     value="{f:translate(key: 'service.send')}">
-</f:comment>
-
-                     <f:form.textfield name="name" value="default value" />
-                     <f:form.submit value="Send Mail" />
+            <f:form method="post" action="create" name="object" controller="Service" object="{object}">
+               <f:form.textfield property="name" 
+                                 class="form-control" 
+                                 id="name_review" 
+                                 placeholder="{f:translate(key: 'service.your.name')}"/>
+               <f:form.textfield property="email" 
+                                 class="form-control" 
+                                 id="mail_review" 
+                                 placeholder="{f:translate(key: 'service.your.email')}"/>
+               <f:form.textfield property="description" 
+                                 class="form-control" 
+                                 id="review" 
+                                 placeholder="{f:translate(key: 'service.text.review')}" />
+               <f:form.submit class="form-control" 
+                              id="button_review" 
+                              value="{f:translate(key: 'service.send')}" />
             </f:form>
           </div>
         </section>
