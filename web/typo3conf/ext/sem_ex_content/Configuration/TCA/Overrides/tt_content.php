@@ -79,12 +79,12 @@ $columns = [
         ]
     ],
 
-    'tx_semexcontent_excursions' => [
-        'label'  => 'excursions',
+    'tx_semexcontent_ordercontents' => [
+        'label'  => 'orderer content',
         'config' => [
             'type'           => 'inline',
-            'foreign_table'  => 'tx_semexcontent_domain_model_excursion',
-            'foreign_field'  => 'excursion',
+            'foreign_table'  => 'tx_semexcontent_domain_model_ordercontent',
+            'foreign_field'  => 'ordercontent',
             'foreign_sortby' => 'sorting',
             'appearance'     => [
                 'createNewRelationLinkTitle' => 'test',
@@ -119,7 +119,7 @@ $columns = [
 
 $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['semexcontent_headcontent'] = 'semexcontent-headcontent';
 $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['semexcontent_footcontent'] = 'semexcontent-footcontent';
-$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['semexcontent_excursion'] = 'semexcontent-excursion';
+$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['semexcontent_ordercontent'] = 'semexcontent-ordercontent';
 
 
 // New type "Headcontent"
@@ -146,11 +146,11 @@ $GLOBALS['TCA']['tt_content']['types']['semexcontent_footcontent'] = [
           tx_gridelements_columns'
 ];
 
-// New type "Excursion"
-$GLOBALS['TCA']['tt_content']['types']['semexcontent_excursion'] = [
+// New type "Ordercontent"
+$GLOBALS['TCA']['tt_content']['types']['semexcontent_ordercontent'] = [
     'showitem' => '
         --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:palette.general;general,
-        tx_semexcontent_excursions,
+        tx_semexcontent_ordercontents,
       --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:tabs.access,
         --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:palette.visibility;visibility,
         --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:palette.access;access,

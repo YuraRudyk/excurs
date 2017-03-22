@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" product-name="sem_forum"
+          date="2016-07-05T22:00:00+01:00">
+        <header/>
+        <body>
+            <trans-unit id="test">
+                <source>test language</source>
+            </trans-unit>
+            <trans-unit id="service.review">
+                <source>Review</source>
+            </trans-unit>
+            <trans-unit id="service.your.name">
+                <source>Your name</source>
+            </trans-unit>
+            <trans-unit id="service.your.email">
+                <source>your email</source>
+            </trans-unit>
+            <trans-unit id="service.text.review">
+                <source>text of review</source>
+            </trans-unit>
+            <trans-unit id="service.send">
+                <source>Send</source>
+            </trans-unit>
+            <trans-unit id="">
+                <source></source>
+            </trans-unit>
+            <trans-unit id="">
+                <source></source>
+            </trans-unit>
+            <trans-unit id="">
+                <source></source>
+            </trans-unit>
+            <trans-unit id="">
+                <source></source>
+            </trans-unit>
+            <trans-unit id="">
+                <source></source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

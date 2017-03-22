@@ -71,6 +71,11 @@ page {
                 pidInList = 5
             }
 
+            content_order < styles.content.get
+            content_order.select {
+                pidInList = 7
+            }
+
             content_excursion < styles.content.get
             content_excursion.select {
                 pidInList = 3

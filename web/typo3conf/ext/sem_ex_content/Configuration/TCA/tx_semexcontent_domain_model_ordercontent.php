@@ -6,7 +6,7 @@ if (!defined('TYPO3_MODE')) {
 
 return [
     'ctrl' => [
-        'title'                    => 'excursion',
+        'title'                    => 'order content',
         'label'                    => 'name',
         'tstamp'                   => 'tstamp',
         'crdate'                   => 'crdate',
@@ -28,10 +28,10 @@ return [
             'fe_group'  => 'fe_group'
         ],
         'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath('sem_ex_content')
-            . 'Resources/Public/Icons/excursion.svg',
+            . 'Resources/Public/Icons/footcontent.svg',
     ],
     'interface' => [
-        'showRecordFieldList' => 'name,price,class,image,image1,image2,image3,ad_info,description,order_ex'
+        'showRecordFieldList' => 'header,name,email,phone,quantity,wish,send'
     ],
     'columns' => [
         'sys_language_uid' => [
@@ -57,9 +57,9 @@ return [
                 'items'      => [
                     ['', 0],
                 ],
-                'foreign_table'       => 'tx_semexcontent_domain_model_excursion',
-                'foreign_table_where' => 'AND tx_semexcontent_domain_model_excursion.pid=###CURRENT_PID### '
-                    . ' AND tx_semexcontent_domain_model_excursion.sys_language_uid IN (-1,0)',
+                'foreign_table'       => 'tx_semexcontent_domain_model_ordercontent',
+                'foreign_table_where' => 'AND tx_semexcontent_domain_model_ordercontent.pid=###CURRENT_PID### '
+                    . ' AND tx_semexcontent_domain_model_ordercontent.sys_language_uid IN (-1,0)',
             ]
         ],
         'l10n_diffsource' => [
@@ -142,78 +142,57 @@ return [
                 'foreign_table_where' => 'ORDER BY fe_groups.title',
             ],
         ],
-
         'name' => [
-            'label'  => 'Header of excursion',
+            'label'  => 'Your name',
             'config' => [
                 'type' => 'input',
                 'eval' => 'trim'
             ]
         ],
-        'price' => [
-            'label'  => 'Price',
+        'header' => [
+            'label'  => 'Header of block',
             'config' => [
                 'type' => 'input',
                 'eval' => 'trim'
             ]
         ],
-        'image' => [
-            'label'  => 'Main image',
-            'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
-                'image',
-                [
-                    'appearance' => [
-                        'createNewRelationLinkTitle' =>
-                            'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference',
-                    ],
-                    'foreign_types' => $GLOBALS['TCA']['tt_content']['columns']['image']['config']['foreign_types'],
-                    'maxitems'      => 4
-                ],
-                $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
-            ),
-        ],
-        'class' => [
-            'label'  => 'Select type',
-            'config' => [
-                'type'       => 'select',
-                'renderType' => 'selectSingle',
-                'items'      => [
-                    ['bus excursion', 'bus'],
-                    ['city excursion', 'lviv'],
-                ],
-            ],
-        ],
-        'ad_info' => [
-            'defaultExtras' => 'richtext:rte_transform[mode=ts_css]',
-            'label'         => 'Additional information',
-            'config'        => [
-                'type'    => 'text',
-                'cols'    => 80,
-                'rows'    => 15,
-                'eval'    => 'trim',
-                'softref' => 'typolink_tag,images,email[subst],url',
-            ]
-        ],
-        'description' => [
-            'defaultExtras' => 'richtext:rte_transform[mode=ts_css]',
-            'label'         => 'Description of excursion',
-            'config'        => [
-                'type'    => 'text',
-                'cols'    => 80,
-                'rows'    => 15,
-                'eval'    => 'trim',
-                'softref' => 'typolink_tag,images,email[subst],url',
-            ]
-        ],
-        'order_ex' => [
-            'label'  => 'Order excursion',
+        'email' => [
+            'label'  => 'Your email',
             'config' => [
                 'type' => 'input',
                 'eval' => 'trim'
             ]
         ],
-        'excursion' => [
-            'label'  => 'excursion',
+        'phone' => [
+            'label'  => 'Your phone',
+            'config' => [
+                'type' => 'input',
+                'eval' => 'trim'
+            ]
+        ],
+        'quantity' => [
+            'label'  => 'Quantity of people',
+            'config' => [
+                'type' => 'input',
+                'eval' => 'trim'
+            ]
+        ],
+        'wish' => [
+            'label'  => 'Your wish',
+            'config' => [
+                'type' => 'input',
+                'eval' => 'trim'
+            ]
+        ],
+        'send' => [
+            'label'  => 'Send',
+            'config' => [
+                'type' => 'input',
+                'eval' => 'trim'
+            ]
+        ],
+        'order' => [
+            'label'  => 'order',
             'config' => [
                 'type' => 'passthrough'
             ]
@@ -222,7 +201,7 @@ return [
 
     'types' => [
         [
-            'showitem' => 'name, price, class, image, imag, image2, image3, ad_info, description, order_ex, sys_language_uid, l10n_parent, hidden'
+            'showitem' => 'header, name, email, phone, quantity, wish, send, sys_language_uid, l10n_parent, hidden'
         ]
     ]
     

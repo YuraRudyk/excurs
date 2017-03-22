@@ -14,5 +14,5 @@ class Row extends AbstractEntity
 {
     use ContentType\HeadcontentTrait;
     use ContentType\FootcontentTrait;
-    use ContentType\ExcursionTrait;
+    use ContentType\OrdercontentTrait;
 }
